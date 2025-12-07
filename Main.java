@@ -566,13 +566,13 @@ public class Main {
     // MAIN: interactive input -> lex -> parse
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("MiniCompilerFullLowLevel");
-        System.out.println("Paste source lines. When finished enter a single line: END");
+        System.out.println("Hello this is me jalil , now we start the parsing process.");
+        System.out.println("Paste source lines. When finished enter a single line: #");
 
         StringBuilder sb = new StringBuilder();
         while (true) {
             String line = sc.nextLine();
-            if (line.equals("END")) break;
+            if (line.equals("#")) break;
             sb.append(line).append("\n");
         }
         String source = sb.toString();
@@ -593,7 +593,7 @@ public class Main {
         parser.parseProgram();
         parser.reportErrors();
 
-        System.out.println("Done.");
+        System.out.println("ALL Correct ✅");
         sc.close();
     }
 }
